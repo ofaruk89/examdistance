@@ -2,7 +2,7 @@
 
 Kendi dosyalarınızı upload download edebileceğiniz kullanışlı bir araç.
 
-sifre_olustur.php yi düzenleyip içerisindeki SifreyiBurayaYaz kısmını değiştirip tarayıcıdan dosyanızı çağırarak hashlenmiş şifrenizi alabilirsiniz. Bu şifreyi api.php deki confige girmeniz yeterlidir.
+sifre_olustur.php yi düzenleyip içerisindeki SifreyiBurayaYaz kısmını değiştirip tarayıcıdan dosyanızı çağırarak hashlenmiş şifrenizi alabilirsiniz. Ardından dosyayı siliniz. Bu şifreyi api.php deki confige girmeniz yeterlidir.
 
 - şifreyi bilen dosya ekleme/silme yapabilir
 - diğer kullanıcılar read onlydir
