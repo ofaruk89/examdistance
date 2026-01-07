@@ -11,3 +11,5 @@ sifre_olustur.php yi düzenleyip içerisindeki SifreyiBurayaYaz kısmını deği
 curl -s -F "action=upload" -F "password=sifreniz" -F "file=@stncl.3mf" https://localhost/sciptDizini/api.php
 
 - api.php nin içinde izin verilen uzantılar configi yapabilirsiniz.
+
+<img width="945" height="626" alt="image" src="https://github.com/user-attachments/assets/de3692a4-ecfa-49b8-8a56-63d3d1455e27" />
