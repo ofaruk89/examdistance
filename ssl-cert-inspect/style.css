@@ -1,0 +1,221 @@
+/* style.css */
+
+/* --- GENEL AYARLAR --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400;500&display=swap');
+
+body {
+    background-color: #f4f6f8; /* Daha modern bir gri tonu */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #202124;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* --- NAVBAR --- */
+.navbar-custom {
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3);
+    padding: 12px 24px;
+    margin-bottom: 30px;
+}
+.navbar-brand {
+    font-weight: 600;
+    color: #1a73e8;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- KART YAPISI (Google Style) --- */
+.gcp-card {
+    background: #fff;
+    border: 0; /* Kenarlık kaldırıldı, sadece gölge */
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(60,64,67, 0.1), 0 4px 8px rgba(60,64,67, 0.05); /* Daha yumuşak gölge */
+    transition: box-shadow 0.2s ease;
+}
+
+.gcp-card:hover {
+    box-shadow: 0 2px 6px rgba(60,64,67, 0.15), 0 8px 16px rgba(60,64,67, 0.1);
+}
+
+.gcp-header {
+    font-size: 18px;
+    color: #202124;
+    margin-bottom: 20px;
+    font-weight: 500;
+    border-bottom: 1px solid #f1f3f4;
+    padding-bottom: 10px;
+}
+
+/* --- FORM ELEMANLARI --- */
+.form-label {
+    font-weight: 500;
+    color: #5f6368;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    transition: all 0.2s;
+}
+
+.form-control:focus {
+    background-color: #fff;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+textarea.form-control {
+    resize: vertical; /* Sadece dikey boyutlandırma */
+}
+
+/* --- SONUÇ ALANI ETİKETLERİ --- */
+.info-label {
+    color: #5f6368;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.info-val {
+    color: #202124;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+/* --- BADGES & DURUMLAR --- */
+.status-badge {
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status-success {
+    background-color: #e6f4ea;
+    color: #137333;
+    border: 1px solid transparent;
+}
+
+.status-error {
+    background-color: #fce8e6;
+    color: #c5221f;
+    border: 1px solid transparent;
+}
+
+/* --- ZİNCİR OKLARI --- */
+.chain-arrow {
+    text-align: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.chain-arrow i {
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #dadce0;
+    font-style: normal;
+    font-size: 12px;
+    color: #5f6368;
+}
+
+.chain-valid { color: #137333; font-weight: bold; }
+.chain-invalid { color: #c5221f; font-weight: bold; }
+
+/* --- SCROLLABLE AREAS (SANs) --- */
+.scroll-box {
+    max-height: 120px;
+    overflow-y: auto;
+    background-color: #f1f3f4;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #e8eaed;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    color: #444;
+}
+
+/* Özel Scrollbar */
+.scroll-box::-webkit-scrollbar { width: 6px; }
+.scroll-box::-webkit-scrollbar-track { background: #f1f3f4; }
+.scroll-box::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+.scroll-box::-webkit-scrollbar-thumb:hover { background: #999; }
+
+/* --- OPENSSL KOMUT ALANI (ACCORDION) --- */
+.accordion-item {
+    border: 1px solid #dadce0;
+    border-radius: 8px !important; /* Bootstrap override */
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background-color: #fff;
+    color: #202124;
+    font-weight: 500;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e8f0fe;
+    color: #1967d2;
+}
+
+.cmd-row {
+    margin-bottom: 15px;
+}
+
+.cmd-label {
+    font-weight: 600;
+    font-size: 12px;
+    color: #5f6368;
+    margin-bottom: 6px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Kod Input Alanı (Dark Mode Görünümü) */
+.cmd-text {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+    background-color: #2d3436 !important; /* Koyu Arka Plan */
+    color: #a29bfe !important; /* Açık Mor/Mavi Kod Rengi */
+    border: 1px solid #2d3436;
+    font-weight: 500;
+}
+
+.input-group-text {
+    background-color: #dfe6e9;
+    color: #636e72;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Kopyala Butonu */
+.copy-btn {
+    border-color: #b2bec3;
+    color: #636e72;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    background-color: #636e72;
+    color: #fff;
+}
